@@ -178,7 +178,7 @@ function Register() {
                   <br />
                   <button
                     type={"submit"}
-                    className="btn btn-primary btn-user btn-block"
+                    className="btn btn-success btn-user btn-block"
                   >
                     Submit
                   </button>
