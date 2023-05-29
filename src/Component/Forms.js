@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import React from "react";
 import { config } from "./config";
 
+
 function Register() {
   let formik = useFormik({
     initialValues: {
@@ -46,24 +47,25 @@ function Register() {
   });
   return (
     <div className="container">
-      <div className="card o-hidden border-0 shadow-lg my-5">
+      <div className="card o-hidden border-0 shadow-lg my-3">
         <div className="card-body p-0">
-          <div className="row">
             <div className="col-lg-12">
               <div className="p-5">
-                <div className="text-center">
-                  <h1 className="h4 text-gray-900 mb-4">Lystloc</h1>
-                  <div className="text-center">
+                <div>
+                  <h1 className="mb-4">
+                    <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/45/0c/96/450c961f-1594-64cd-51fa-0073de6e723a/source/512x512bb.jpg" className="img-fluid" style={{height:'35px'}}  alt="Logo" ></img>
+                    Lystloc</h1>
+                  <h3 className="text-center">
                     Track your employees On and Off the field!
-                  </div>
-                  <p>
+                  </h3>
+                  <p className="text-center">
                     Invest more time on business growth and less time on sales
                     operation in just 4 easy
                   </p>
                 </div>
                 <form className="user" onSubmit={formik.handleSubmit}>
-                  <div className="form-group row">
-                    <div className="col-sm-6 mb-3 mb-sm-0">
+                  <div className="form-group form-inline">
+                    <div className="col-md-4">
                       <input
                         name="name"
                         onChange={formik.handleChange}
@@ -82,6 +84,7 @@ function Register() {
                         id="exampleFirstName"
                         placeholder="Full Name"
                       />
+                  
                       {formik.touched.name && formik.errors.name ? (
                         <span style={{ color: "red" }}>
                           {formik.errors.name}
@@ -90,7 +93,7 @@ function Register() {
                     </div>
                   </div>
                   <br />
-                  <div className="form-group">
+                  <div className="form-group col-md-6">
                     <input
                       name="company"
                       className="form-control form-control-user"
@@ -103,7 +106,7 @@ function Register() {
                     />
                   </div>
                   <br />
-                  <div className="form-group">
+                  <div className="form-group col-md-6">
                     <input
                       name="email"
                       onChange={formik.handleChange}
@@ -129,7 +132,7 @@ function Register() {
                     ) : null}
                   </div>
                   <br />
-                  <div className="form-group">
+                  <div className="form-group col-md-4">
                     <input
                       name="jobTitle"
                       className="form-control form-control-user"
@@ -143,7 +146,7 @@ function Register() {
                   </div>
                   <br />
                   <div className="form-group row">
-                    <div className="col-sm-6 mb-3 mb-sm-0">
+                    <div className="col-md-4">
                       <input
                         name="phoneNumber"
                         onChange={formik.handleChange}
@@ -182,7 +185,7 @@ function Register() {
                 </form>
               </div>
             </div>
-          </div>
+         
         </div>
       </div>
     </div>
